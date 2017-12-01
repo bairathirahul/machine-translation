@@ -3,18 +3,23 @@ import os
 import collections
 import string
 from nltk import word_tokenize
+from nltk import pos_tag
 from operator import itemgetter
+
 
 class Solution2 :
     """
     Implementation of IBM Model 1
     """
-    def __init__(self, source_file, target_file):
+    def __init__(self, source_file, target_file, pos_tagging=False):
         """
         Initialize the class with the training data
         :param source_file: Training corpus in source language
         :param target_file: Training corpus in target language
         """
+        
+        # POS Tag?
+        self.pos_tagging = pos_tagging
         
         # Read training dataset
         source_lines = self.read_text_file(source_file)
@@ -25,10 +30,13 @@ class Solution2 :
         for index, source_line in enumerate(source_lines):
             source_words = list(word_tokenize(source_line))
             target_words = list(word_tokenize(target_lines[index]))
+            if self.pos_tagging:
+                source_words = pos_tag(source_words)
+                target_words = pos_tag(target_words)
             corpus.append((target_words, source_words))
         
         # Train the model
-        self.model = self.train(corpus, 10)
+        self.model = self.train(corpus, 25)
         
     def translate(self, source_file):
         """
@@ -37,7 +45,11 @@ class Solution2 :
         """
         
         # Name of output file. The extension of output file is .translated
-        output_file = os.path.splitext(source_file)[0] + '.translated'
+        if self.pos_tagging:
+            output_file = os.path.splitext(source_file)[0] + '_pos.translated'
+        else:
+            output_file = os.path.splitext(source_file)[0] + '.translated'
+            
         try:
             # Open output file for writing
             output_file = open(output_file, 'w')
@@ -50,14 +62,22 @@ class Solution2 :
         for source_line in source_lines:
             # Generate word tokens
             source_words = list(word_tokenize(source_line.strip()))
+            # Preform POS tagging
+            if self.pos_tagging:
+                source_words = pos_tag(source_words)
+                
             translated_words = []
             # Generate translated words
             for word in source_words:
-                if(self.model[word]):
+                if self.model[word]:
                     translated_word = max(self.model[word].items(), key=itemgetter(1))[0]
-                else:
-                    translated_word = word
-                translated_words.append(translated_word)
+                    translated_words.append(translated_word)
+            
+            # Remove POS tags
+            if self.pos_tagging:
+                translated_words = [word[0] for word in translated_words]
+                
+            # Convert words to sentences
             translated_sentence = self.words_to_sentence(translated_words)
             
             # Write translated sentence to the output file
@@ -145,9 +165,24 @@ class Solution2 :
         return model
     
     
+print('--------------------------------------------')
+print('| Executing translation                     |')
+print('--------------------------------------------')
 solution2 = Solution2('es-en/train/europarl-v7.es-en.es', 'es-en/train/europarl-v7.es-en.en')
-#solution2 = Solution2('es-en/train/train.es', 'es-en/train/train.en')
-print( 'Translating dev')
+print('| Translating det set                       |')
 solution2.translate('es-en/dev/newstest2012.es')
-print('Translating test')
+print('| Translating test set                      |')
 solution2.translate('es-en/test/newstest2013.es')
+print('| Translation done                          |')
+print('--------------------------------------------')
+
+print('--------------------------------------------')
+print('| Executing translation with POS tagging    |')
+print('--------------------------------------------')
+solution2 = Solution2('es-en/train/europarl-v7.es-en.es', 'es-en/train/europarl-v7.es-en.en', pos_tagging=True)
+print('| Translating dev set                       |')
+solution2.translate('es-en/dev/newstest2012.es')
+print('| Translating test set                      |')
+solution2.translate('es-en/test/newstest2013.es')
+print('| Translation done                          |')
+print('--------------------------------------------')

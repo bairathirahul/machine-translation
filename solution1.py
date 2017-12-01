@@ -15,6 +15,7 @@ class Solution1:
     Class that implements Direct Machine Translation, as required by the Problem 1
     of the assignment
     """
+    
     def __init__(self, dictionary_file, training_file):
         """
         Initialize the class instance
@@ -36,7 +37,7 @@ class Solution1:
         
         # Prepare the language model
         self.train(training_data)
-        
+    
     @staticmethod
     def read_text_file(filename):
         """
@@ -46,8 +47,9 @@ class Solution1:
         """
         try:
             file = open(filename, 'r')
-        except:
+        except IOError as e:
             print('Cannot read file ' + filename + '. Please check the path', file=sys.stderr)
+            print('I/O error({0}): {1}'.format(e.errno, e.strerror), file=sys.stderr)
             sys.exit(1)
         output = []
         
@@ -65,8 +67,9 @@ class Solution1:
         """
         try:
             file = open(filename, 'r')
-        except:
+        except IOError as e:
             print('Cannot read file ' + filename + '. Please check the path', file=sys.stderr)
+            print('I/O error({0}): {1}'.format(e.errno, e.strerror), file=sys.stderr)
             sys.exit(1)
         return json.load(file)
     
@@ -88,11 +91,11 @@ class Solution1:
             output[word] = output[word]['translatedText']
         return output
     """
-        
+    
     @staticmethod
     def words_to_sentence(words):
         return ''.join([word if word in string.punctuation else ' ' + word for word in words]).strip()
-
+    
     @staticmethod
     def fix_determiners(words):
         """
@@ -115,14 +118,14 @@ class Solution1:
                     words_pos[index] = ('an', words_pos[index][1])
             if index == length - 2:
                 break
-    
+        
         # Remove words
         if len(indices_to_remove) > 0:
             for index in indices_to_remove:
                 words_pos.pop(index)
-    
+        
         return [word[0] for word in words_pos]
-
+    
     @staticmethod
     def remove_consecutive_prp(words):
         """
@@ -139,12 +142,12 @@ class Solution1:
                 indices_to_remove.append(index)
             if index == length - 2:
                 break
-    
+        
         # Remove words
         if len(indices_to_remove) > 0:
             for index in indices_to_remove:
                 words_pos.pop(index)
-    
+        
         return [word[0] for word in words_pos]
     
     @staticmethod
@@ -164,25 +167,26 @@ class Solution1:
                 words_pos[index + 1] = word
             if index == length - 2:
                 break
-    
-        return [word[0] for word in words_pos]
         
+        return [word[0] for word in words_pos]
+    
     @staticmethod
-    def print_translation(title, source, translation, original_translation):
+    def print_translation(translations, output_file):
         """
-        Print the translation
-        :param title: Title
-        :param source: Source sentence
-        :param translation: Translated sentence
+        Print and write the translation to the output file
+        :param translations: Translations output list
+        :param output_file: Output file instance
         """
         print('------------------------------------------------------------------------------------------------------')
-        print('| %s' % title)
+        print('------------------------------------------------------------------------------------------------------',
+              file=output_file)
+        for translation in translations:
+            print('\033[1m%s:\033[0m\n%s\n' % translation)
+            print('%s:\n%s\n' % translation, file=output_file)
         print('------------------------------------------------------------------------------------------------------')
-        print('\033[1mSource Sentence:\033[0m %s' % source)
-        print('\033[1mTranslated Sentence:\033[0m %s' % translation)
-        print('\033[1mOriginal Translation:\033[0m %s' % original_translation)
-        print('------------------------------------------------------------------------------------------------------')
-
+        print('------------------------------------------------------------------------------------------------------',
+              file=output_file)
+    
     def train(self, lines):
         """
         Training unigram, bigram, unigram with pos and bigram with pos models
@@ -218,7 +222,7 @@ class Solution1:
             bigram_pos = bigram_pos + list(
                 ngrams(words_pos, 2, pad_left=True, pad_right=True, left_pad_symbol='<s>',
                        right_pad_symbol='</s>'))
-            
+        
         # Generate frequency distribution of all lists
         self.unigram_words = FreqDist(unigram_words)
         self.bigram_words = FreqDist(bigram_words)
@@ -263,7 +267,7 @@ class Solution1:
         for bigram in bigrams:
             probability += math.log(self.bigram_pos_words.freq(bigram) + 1) - math.log(
                 self.unigram_pos_words.freq(bigram[1]) + vocabulary_size)
-            
+        
         return probability
     
     def get_bigram_pos_probability(self, tags):
@@ -281,7 +285,7 @@ class Solution1:
         for bigram in bigrams:
             probability += math.log(self.bigram_pos.freq(bigram) + 1) - math.log(
                 self.unigram_pos.freq(bigram[1]) + vocabulary_size)
-    
+        
         return probability
     
     def get_highest_probability_permutation(self, words, method):
@@ -306,7 +310,7 @@ class Solution1:
             if probability > max_probability:
                 max_probability = probability
                 selected = permutation
-                
+        
         return selected
     
     def get_arrangement_with_pos_model(self, words):
@@ -322,7 +326,7 @@ class Solution1:
         
         for index, word in enumerate(words_pos):
             # Pick 4 words window
-            words_window = words_pos[index : index + 4]
+            words_window = words_pos[index: index + 4]
             
             max_probability = -math.inf
             selected = None
@@ -345,19 +349,21 @@ class Solution1:
             words_pos[index + 3] = selected[3]
             
             if index == length - 4:
-                break;
-                
+                break
+        
         # Return the list of rearranged words
         return [word[0] for word in words_pos]
     
-    def translate(self, line, original_translation):
+    def translate(self, source_sentence, original_translation, output_file):
         """
         Perform translation of the given line
-        :param line: Line of input file
+        :param source_sentence: Line of input file
+        :param original_translation: Original translation from the test data
+        :param output_file: File to write output to
         """
         
         # Get word tokens
-        words = word_tokenize(line)
+        words = word_tokenize(source_sentence)
         translated_words = []
         # Perform direct machine translation using dictionary
         for i, word in enumerate(words):
@@ -367,52 +373,71 @@ class Solution1:
             else:
                 translated_words.append(word)
         
+        output = list()
+        output.append(('Source Sentence', source_sentence))
+        output.append(('Original Translation', original_translation))
+        
         # Normal translation output
         translated_sentence = self.words_to_sentence(translated_words)
-        self.print_translation('Normal Translation', line, translated_sentence, original_translation)
-
+        output.append(('Direct Machine Translation', translated_sentence))
+        
         # Improvement 1: Fixing determiners
         translated_words = self.fix_determiners(translated_words)
         translated_sentence = self.words_to_sentence(translated_words)
-        self.print_translation('Fixing Determiners', line, translated_sentence, original_translation)
+        output.append(('Fixing determiners', translated_sentence))
         
         # Improvement 2: Removing consecutive pronouns
         translated_words = self.remove_consecutive_prp(translated_words)
         translated_sentence = self.words_to_sentence(translated_words)
-        self.print_translation('Removing Consecutive Pronouns', line, translated_sentence, original_translation)
+        output.append(('Removing consecutive pronouns', translated_sentence))
         
         # Improvement 3: Swapping reverse orders verbs and noun/pronouns
         translated_words = self.swap_verb_prp(translated_words)
         translated_sentence = self.words_to_sentence(translated_words)
-        self.print_translation('Swapping reverse orders verbs and noun/pronouns', line, translated_sentence, original_translation)
+        output.append(('Swapping reverse orders verbs and noun/pronouns', translated_sentence))
         
         # Improvement 4: Bigram Language Model
-        selected_translation = self.get_highest_probability_permutation(translated_words, 'get_bigram_words_probability')
-        translated_sentence = self.words_to_sentence(selected_translation)
-        self.print_translation('Bigram Language Model', line, translated_sentence, original_translation)
-
+        translated_words = self.get_highest_probability_permutation(translated_words, 'get_bigram_words_probability')
+        translated_sentence = self.words_to_sentence(translated_words)
+        output.append(('Bigram Language Model', translated_sentence))
+        
         # Improvement 5: Bigram POS Language Model
-        selected_translation = self.get_highest_probability_permutation(translated_words, 'get_bigram_pos_words_probability')
-        translated_sentence = self.words_to_sentence(selected_translation)
-        self.print_translation('Bigram with POS Tagging', line, translated_sentence, original_translation)
+        translated_words = self.get_highest_probability_permutation(translated_words,
+                                                                    'get_bigram_pos_words_probability')
+        translated_sentence = self.words_to_sentence(translated_words)
+        output.append(('Bigram POS Language Model', translated_sentence))
         
         # Improvement 6: Rearrangement of POS
-        selected_translation = self.get_arrangement_with_pos_model(translated_words)
-        translated_sentence = self.words_to_sentence(selected_translation)
-        self.print_translation('Words rearrangment with POS model', line, translated_sentence, original_translation)
+        translated_words = self.get_arrangement_with_pos_model(translated_words)
+        translated_sentence = self.words_to_sentence(translated_words)
+        output.append(('Rearrangement of POS', translated_sentence))
+        
+        self.print_translation(output, output_file)
     
-    def execute(self, input_file, translation_file):
+    def execute(self, input_file, translation_file, output_file):
         """
         Execute the tests on given input file
         :param input_file: Input file
+        :param translation_file: File containing original translations
+        :param output_file: File to write output to
         """
         input_lines = self.read_text_file(input_file)
+        # Open output file for writing
+        try:
+            output_file = open(output_file, 'w')
+        except IOError as e:
+            print('Cannot open file' + output_file + ' for writing', file=sys.stderr)
+            print('I/O error({0}): {1}'.format(e.errno, e.strerror), file=sys.stderr)
+            sys.exit(1)
+        
         original_translation_lines = self.read_text_file(translation_file)
         for index, line in enumerate(input_lines):
             # Translate each line
-            self.translate(line, original_translation_lines[index])
+            self.translate(line, original_translation_lines[index], output_file)
 
 
 solution1 = Solution1('data/dictionary.json', 'data/dev_en.txt')
-#solution1.execute('data/dev_de.txt', 'data/dev_en.txt')
-solution1.execute('data/test_de.txt', 'data/test_en.txt')
+# Execution on dev set
+solution1.execute('data/dev_de.txt', 'data/dev_en.txt', 'data/output_dev.txt')
+# Execution on test set
+solution1.execute('data/test_de.txt', 'data/test_en.txt', 'data/output_test.txt')

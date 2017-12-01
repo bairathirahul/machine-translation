@@ -1,0 +1,145 @@
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+das benehmen eines menschen mag auf hartem fels oder in sumpfigen niederungen gegründet sein, aber von einem bestimmten punkt an ist es mir egal, worauf es beruht.
+
+Original Translation:
+conduct may be founded on the hard rock or the wet marshes, but after a certain point i don't care what it's founded on.
+
+Direct Machine Translation:
+the behavior one People like on hard rock or in marshy lowlands founded be, but from one certain Point at is it me no matter, whereupon it is based.
+
+Fixing determiners:
+the behavior one People like on hard rock or in marshy lowlands founded be, but from one certain Point at is it me no matter, whereupon it is based.
+
+Removing consecutive pronouns:
+the behavior one People like on hard rock or in marshy lowlands founded be, but from one certain Point at is me no matter, whereupon it is based.
+
+Swapping reverse orders verbs and noun/pronouns:
+the behavior one People like on hard rock or in marshy lowlands founded be, but from one certain Point at me is no matter, whereupon it is based.
+
+Bigram Language Model:
+or is based but on People, it the no matter like lowlands is be behavior rock at whereupon founded certain Point marshy one from one me in hard,.
+
+Bigram POS Language Model:
+it or Point, whereupon on one the in like founded no matter is rock behavior me, hard is based People at lowlands marshy be but from certain one.
+
+Rearrangement of POS:
+it, whereupon on or the in like founded no matter rock behavior me, hard is based People at lowlands marshy be but from certain is. Point one one
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+als ich letzten herbst aus dem osten zurückkam, wünschte ich mir jedenfalls, die ganze welt wäre noch in uniform und würde moralisch weiterhin strammstehen; ich wollte keine zügellosen exkurse und allzu vertraulichen einblicke in das menschliche herz mehr.
+
+Original Translation:
+when i came back from the east last autumn i felt that i wanted the world to be in uniform and at a sort of moral attention forever; i wanted no more riotous excursions with privileged glimpses into the human heart.
+
+Direct Machine Translation:
+as I last autumn out the east came back, wish I me in any case, the whole world would still in uniform and would morally Farther stand to attention; I wanted no licentious digressions and too confidential insights in the human heart more.
+
+Fixing determiners:
+as I last autumn out the east came back, wish I me in any case, the whole world would still in uniform and would morally Farther stand to attention; I wanted no licentious digressions and too confidential insights in the human heart more.
+
+Removing consecutive pronouns:
+as I last autumn out the east came back, wish me in any case, the whole world would still in uniform and would morally Farther stand to attention; I wanted no licentious digressions and too confidential insights in the human heart more.
+
+Swapping reverse orders verbs and noun/pronouns:
+as I last autumn out the east came back, me wish in any case, the whole world would still in uniform and would morally Farther stand to attention; I wanted no licentious digressions and too confidential insights in the human heart more.
+
+Bigram Language Model:
+heart I last would out digressions human, world stand to attention in wish confidential the in any case no whole, uniform morally too autumn and I insights; wanted as and the in more the would came back licentious Farther east me still.
+
+Bigram POS Language Model:
+in confidential, came back out digressions heart I no licentious still would east I the as stand to attention human and, last wish the whole morally more uniform insights; me too wanted Farther would the world in and in any case autumn.
+
+Rearrangement of POS:
+in confidential, digressions heart I no licentious still came back I the as stand to attention human and, last wish the whole morally east uniform insights out me too wanted more would the world in and in any case autumn.; Farther would
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+nur gatsby, der mann, der diesem buch den namen gibt, war davon ausgenommen – ausgerechnet gatsby, der alles repräsentierte, was ich ehrlich verachte.
+
+Original Translation:
+only gatsby, the man who gives his name to this book, was exempt from my reaction gatsby, who represented everything for which i have an unaffected scorn.
+
+Direct Machine Translation:
+just gatsby, of the man, of the this book the names gives, was from that except- just gatsby, of the everything represented, What I Honestly despise.
+
+Fixing determiners:
+just gatsby, of the man, of the this book the names gives, was from that except- just gatsby, of the everything represented, What I Honestly despise.
+
+Removing consecutive pronouns:
+just gatsby, of the man, of the this book the names gives, was from that except- just gatsby, of the everything represented, What I Honestly despise.
+
+Swapping reverse orders verbs and noun/pronouns:
+just gatsby, of the man, of the this book the names gives, was from that except- just gatsby, of the everything represented, What I Honestly despise.
+
+Bigram Language Model:
+of the gatsby from that, just of the names book the I was represented of the just, gatsby, What except gives- Honestly this everything man despise,,.
+
+Bigram POS Language Model:
+gatsby represented this from that I man-,, just of the What names,, except just, was of the Honestly despise of the gives the everything gatsby book.
+
+Rearrangement of POS:
+gatsby from that this man I,, just represented names,, except just, was of the of the despise of the gives the everything gatsby book.- What Honestly
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+wenn persönlichkeit eine ununterbrochene folge von gelungenen gesten ist, dann hatte er etwas großartiges, man spürte eine gesteigerte empfindlichkeit gegenüber den versprechungen des lebens bei ihm, so, als wäre er ein verwandter jener komplizierten maschinen, die ein erdbeben aus zehntausend meilen entfernung wahrnehmen.
+
+Original Translation:
+if personality is an unbroken series of successful gestures, then there was something gorgeous about him, some heightened sensitivity to the promises of life, as if he were related to one of those intricate machines that register earthquakes ten thousand miles away.
+
+Direct Machine Translation:
+if personality a uninterrupted episode from successful gestures is, then would have he something great, you felt a increased sensitivity across from the promises of life at him, so, as would he on related that complicated machinery, the on earthquake out ten thousand miles distance perceive.
+
+Fixing determiners:
+if personality an uninterrupted episode from successful gestures is, then would have he something great, you felt an increased sensitivity across from the promises of life at him, so, as would he on related that complicated machinery, the on earthquake out ten thousand miles distance perceive.
+
+Removing consecutive pronouns:
+if personality an uninterrupted episode from successful gestures is, then would have he something great, you felt an increased sensitivity across from the promises of life at him, so, as would he on related that complicated machinery, the on earthquake out ten thousand miles distance perceive.
+
+Swapping reverse orders verbs and noun/pronouns:
+if personality an uninterrupted episode from successful gestures is, then he something would have great, you felt an sensitivity increased across from the promises of life at him, so, as would he on related that complicated machinery, the on earthquake out ten thousand miles distance perceive.
+
+Bigram Language Model:
+episode out him felt he then that would have distance on, he gestures uninterrupted, from at promises as, of great perceive, complicated you machinery personality the successful an on if so life an earthquake would related is, increased ten thousand the across from something miles sensitivity.
+
+Bigram POS Language Model:
+perceive is out that complicated an, as gestures related on then, you would have, an he felt him uninterrupted earthquake ten thousand across from miles episode something promises sensitivity at of personality the from great life successful would if the he,, distance so increased machinery on.
+
+Rearrangement of POS:
+perceive that complicated an, as gestures related on then, you would have, an he felt him uninterrupted earthquake ten thousand across from miles episode something promises sensitivity at of personality the from great life successful if the he,, distance so increased machinery on. out would is
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+diese sensibilität hatte mit der schlaffen wehleidigkeit, die gern als künstlerisches temperament auftritt, nichts zu tun – sie war vielmehr eine außergewöhnliche begabung zur hoffnung, eine romantische bereitschaft, wie ich sie noch bei keinem anderen menschen gefunden habe und wohl auch nie wieder finden werde.
+
+Original Translation:
+this responsiveness had nothing to do with that flabby impressionability which is dignified under the name of the creative temperament. — it was an extraordinary gift for hope, a romantic readiness such as i have never found in any other person and which it is not likely i shall ever find again.
+
+Direct Machine Translation:
+these sensitivity would have With of the flaccid self-pity, the gladly as artistic temperament occurs, Nothing to do- you was much more a extraordinary talent to hope, a romantic standby, as I you still at any other People found have and well also never again Find will.
+
+Fixing determiners:
+these sensitivity would have With of the flaccid self-pity, the gladly as artistic temperament occurs, Nothing to do- you was much more an extraordinary talent to hope, a romantic standby, as I you still at any other People found have and well also never again Find will.
+
+Removing consecutive pronouns:
+these sensitivity would have With of the flaccid self-pity, the gladly as artistic temperament occurs, Nothing to do- you was much more an extraordinary talent to hope, a romantic standby, as you still at any other People found have and well also never again Find will.
+
+Swapping reverse orders verbs and noun/pronouns:
+these sensitivity would have With of the flaccid self-pity, the gladly as artistic temperament occurs, Nothing to do- you was much more an extraordinary talent to hope, a romantic standby, as you still at any other People found have and well also never again Find will.
+
+Bigram Language Model:
+to, as at well again extraordinary any never, Find sensitivity standby romantic still flaccid an gladly much more found these hope temperament artistic do as also was other have talent you would have and, self-pity Nothing People of the occurs the you With will a to-,.
+
+Bigram POS Language Model:
+other as and of the to, found romantic With talent well again these extraordinary temperament sensitivity never a flaccid artistic an standby any much more occurs hope do Nothing at will, as,- also self-pity have you still was, to People would have gladly Find you the.
+
+Rearrangement of POS:
+as of the other, and romantic With talent well again these extraordinary temperament sensitivity never a flaccid artistic an standby any much more occurs hope do found at, as, Nothing also self-pity have you still was, to People would have gladly to you the. will- Find
+
+------------------------------------------------------------------------------------------------------

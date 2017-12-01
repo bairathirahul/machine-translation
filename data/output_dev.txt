@@ -1,0 +1,290 @@
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+in meinen jüngeren und verletzlicheren jahren hat mein vater mir einen rat gegeben, der mir seither nicht mehr aus dem kopf geht.
+
+Original Translation:
+in my younger and more vulnerable years my father gave me some advice that i've been turning over in my mind ever since.
+
+Direct Machine Translation:
+in mean younger and more vulnerable years Has my father me one advice given, of the me since Not more out the head going.
+
+Fixing determiners:
+in mean younger and more vulnerable years Has my father me one advice given, of the me since Not more out the head going.
+
+Removing consecutive pronouns:
+in mean younger and more vulnerable years Has my father me one advice given, of the me since Not more out the head going.
+
+Swapping reverse orders verbs and noun/pronouns:
+in mean younger and more vulnerable years Has my father me one advice given, of the me since Not more out the head going.
+
+Bigram Language Model:
+more Not more vulnerable years in my father Has going younger the and since head, one advice me given out mean of the me.
+
+Bigram POS Language Model:
+out me and Has head going my, in Not more vulnerable me advice one mean since of the the father more given younger years.
+
+Rearrangement of POS:
+out me head and, in Not more vulnerable me advice going mean since of the the father my given more years. Has one younger
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+jedes mal, wenn du glaubst, jemanden kritisieren zu müssen, sagte er, dann erinnere dich daran, dass nicht alle menschen auf der welt solche privilegien wie du gehabt haben.
+
+Original Translation:
+whenever you feel like criticizing any one, he told me, just remember that all the people in this world haven't had the advantages that you've had.
+
+Direct Machine Translation:
+each times, if you think, someone criticize to have to, said he, then remember you it, that Not all People on of the world such privileges as you had to have.
+
+Fixing determiners:
+each times, if you think, someone criticize to have to, said he, then remember you it, that Not all People on of the world such privileges as you had to have.
+
+Removing consecutive pronouns:
+each times, if you think, someone criticize to have to, said he, then remember it, that Not all People on of the world such privileges as you had to have.
+
+Swapping reverse orders verbs and noun/pronouns:
+each times, if you think, someone criticize to have to, he said, then it remember, that Not all People on of the world such privileges as you had to have.
+
+Bigram Language Model:
+People on if times to think that it criticize, privileges then have to, of the as,, remember you he had such you, said each world all Not to have someone.
+
+Bigram POS Language Model:
+said as world he if then on privileges think you that of the had all such to, have to you, to have times, Not it, someone each People, remember criticize.
+
+Rearrangement of POS:
+world as if he on then privileges you that of the think all such said, had you, times, Not it, someone each have to, to have criticize. to People remember
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+mehr sagte er nicht, aber wir haben uns schon immer auf sehr zurückhaltende weise verstanden, und ich begriff, dass er noch viel mehr meinte.
+
+Original Translation:
+he didn't say any more, but we've always been unusually communicative in a reserved way, and i understood that he meant a great deal more than that.
+
+Direct Machine Translation:
+more said he Not, but we to have us beautiful always on very restrained wise Roger that, and I term, that he still a lot of more said.
+
+Fixing determiners:
+more said he Not, but we to have us beautiful always on very restrained wise Roger that, and I term, that he still a lot of more said.
+
+Removing consecutive pronouns:
+more said he Not, but we to have us beautiful always on very restrained wise Roger that, and I term, that he still a lot of more said.
+
+Swapping reverse orders verbs and noun/pronouns:
+more he said Not, but we us to have beautiful always on very restrained wise Roger that, and I term, that he still a lot of more said.
+
+Bigram Language Model:
+and term restrained said he to have very Not more beautiful us, he Roger that I that, a lot of but still more wise we always on said,.
+
+Bigram POS Language Model:
+and, I, us he restrained more always, Roger that said that but wise we term on to have beautiful said more still Not a lot of he very.
+
+Rearrangement of POS:
+,, I us he and always, restrained said that but wise we term on to have beautiful said still Not a lot of he very. more Roger that more
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+ich halte mich deshalb stets mit jeglichem urteil zurück, eine gewohnheit, die mir viele eigentümliche naturen erschlossen hat, mich aber auch häufig zum opfer von altgedienten langweilern machte.
+
+Original Translation:
+in consequence, i'm inclined to reserve all judgments, a habit that has opened up many curious natures to me and also made me the victim of not a few veteran bores.
+
+Direct Machine Translation:
+I think me that&#39;s why always With any judgment back, a habit, the me lots peculiar nativity opened up Has, me but also frequently to the Victim from veteran many hamlets made.
+
+Fixing determiners:
+I think me that&#39;s why always With any judgment back, a habit, me lots peculiar nativity opened up Has, me but also frequently to the Victim from veteran many hamlets made.
+
+Removing consecutive pronouns:
+I think me that&#39;s why always With any judgment back, a habit, me lots peculiar nativity opened up Has, me but also frequently to the Victim from veteran many hamlets made.
+
+Swapping reverse orders verbs and noun/pronouns:
+I me think that&#39;s why always With any judgment back, a habit, me lots peculiar nativity opened up Has, me but also frequently to the Victim from veteran many hamlets made.
+
+Bigram Language Model:
+habit me always any Has me, With Victim made nativity that&#39;s why I, judgment think to the lots also frequently but from veteran opened up, a back me many hamlets peculiar.
+
+Bigram POS Language Model:
+With also nativity me but back, always judgment think habit many hamlets any Has me veteran, me, that&#39;s why I Victim from peculiar opened up to the lots frequently a made.
+
+Rearrangement of POS:
+nativity With also me, back judgment always habit many hamlets any think me veteran, me, but I Victim from peculiar opened up to the lots frequently a made. Has that&#39;s why
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+das gestörte gemüt erkennt nämlich diese eigenschaft bei normalen menschen sofort und schließt sich ihnen gern an, sodass ich im college völlig zu unrecht beschuldigt wurde, ich sei ein politiker, bloß weil mir wildfremde leute ihren geheimsten kummer anvertraut hatten.
+
+Original Translation:
+the abnormal mind is quick to detect and attach itself to this quality when it appears in a normal person, and so it came about that in college i was unjustly accused of being a politician, because i was privy to the secret griefs of wild, unknown men.
+
+Direct Machine Translation:
+the disturbed mind recognizes namely these property at normal People immediately and includes themselves them gladly at, so that I in the college completely to wrong accused has been, I be on Politician, just because me strangers People their secret sorrow entrusted had.
+
+Fixing determiners:
+the disturbed mind recognizes namely these property at normal People immediately and includes themselves them gladly at, so that I in the college completely to wrong accused has been, I be on Politician, just because me strangers People their secret sorrow entrusted had.
+
+Removing consecutive pronouns:
+the disturbed mind recognizes namely these property at normal People immediately and includes them gladly at, so that I in the college completely to wrong accused has been, I be on Politician, just because me strangers People their secret sorrow entrusted had.
+
+Swapping reverse orders verbs and noun/pronouns:
+the disturbed mind recognizes namely these property at normal People immediately and them includes gladly at, so that I college in the completely to wrong accused has been, I be on Politician, just because me strangers their People secret sorrow entrusted had.
+
+Bigram Language Model:
+disturbed just People on, them gladly entrusted I had be these has been sorrow recognizes immediately, and includes the secret namely strangers property at accused in the normal Politician because wrong People their so that I completely at to college, mind. me
+
+Bigram POS Language Model:
+, wrong me them property has been Politician I at college entrusted disturbed completely accused to their includes these the in the secret because strangers at immediately, be recognizes, on People sorrow had just mind normal gladly I namely and People so that.
+
+Rearrangement of POS:
+wrong, property has been Politician me at college them disturbed I completely entrusted accused these the in the secret because strangers at immediately, be recognizes, on People sorrow had just mind normal gladly I namely and People so that. to their includes
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+die meisten dieser vertraulichen mitteilungen wurden mir gänzlich unaufgefordert gemacht, und oft genug habe ich schlaf, anderweitige beschäftigung oder eine abwehrende heiterkeit vorgetäuscht, wenn ich anzeichen dafür bemerkte, dass eine intime enthüllung bevorstand.
+
+Original Translation:
+most of the confidences were unsought frequently i have feigned sleep, preoccupation, or a hostile levity when i realized by some unmistakable sign that an intimate revelation was quivering on the horizon.
+
+Direct Machine Translation:
+the most this confidential Messages were me completely unsolicited made, and often enough have I sleep, otherwise employment or a defensive cheerfulness feigned, if I sign for this noticed, that a intimate revelation awaited.
+
+Fixing determiners:
+the most this confidential Messages were me completely unsolicited made, and often enough have I sleep, otherwise employment or a defensive cheerfulness feigned, if I sign for this noticed, that an intimate revelation awaited.
+
+Removing consecutive pronouns:
+the most this confidential Messages were me completely unsolicited made, and often enough have I sleep, otherwise employment or a defensive cheerfulness feigned, if I sign for this noticed, that an intimate revelation awaited.
+
+Swapping reverse orders verbs and noun/pronouns:
+the most this confidential Messages me were completely unsolicited made, and often enough I have sleep, otherwise employment or a defensive cheerfulness feigned, if I sign for this noticed, that an intimate revelation awaited.
+
+Bigram Language Model:
+completely, me, defensive I or and unsolicited an enough most made for this the Messages intimate have cheerfulness that awaited sleep this employment, a if otherwise feigned I often revelation sign, noticed were confidential.
+
+Bigram POS Language Model:
+I unsolicited most feigned an cheerfulness that a me made enough or this the and, Messages completely employment intimate, sign awaited if, sleep I have confidential otherwise were often for this defensive revelation, noticed.
+
+Rearrangement of POS:
+I unsolicited an cheerfulness that a me feigned enough made this the or, and completely employment intimate, sign awaited if, sleep I have confidential otherwise were often for this defensive revelation, noticed. most Messages
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+denn die intimen geständnisse junger männer – oder zumindest die begriffe, die sie dabei verwenden, sind in der regel plagiate und durch offensichtliche verdrängung verunstaltet.
+
+Original Translation:
+for the intimate revelations of young men, or at least the terms in which they express them, are usually plagiaristic and marred by obvious suppressions.
+
+Direct Machine Translation:
+because the intimate confessions younger Men- or at least the concepts, the you there use, are in of the rule plagiarism and by obvious displacement defaced.
+
+Fixing determiners:
+because the intimate confessions younger Men- or at least the concepts, you there use, are in of the rule plagiarism and by obvious displacement defaced.
+
+Removing consecutive pronouns:
+because the intimate confessions younger Men- or at least the concepts, you there use, are in of the rule plagiarism and by obvious displacement defaced.
+
+Swapping reverse orders verbs and noun/pronouns:
+because the intimate confessions younger Men- or at least the concepts, you there use, are in of the rule plagiarism and by obvious displacement defaced.
+
+Bigram Language Model:
+and in- by you the younger plagiarism concepts Men, because the are obvious intimate of the rule, displacement there defaced or use confessions at least.
+
+Bigram POS Language Model:
+displacement concepts plagiarism by Men and the defaced or use confessions of the you the in, rule because intimate, are obvious at least- younger there.
+
+Rearrangement of POS:
+displacement plagiarism by concepts the defaced and use confessions of the you the in, rule because intimate, are obvious at least or there. Men- younger
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+der verzicht auf kritische urteile enthält eine unendliche hoffnung.
+
+Original Translation:
+reserving judgments is a matter of infinite hope.
+
+Direct Machine Translation:
+of the waiver on critical judge contains a endless hope.
+
+Fixing determiners:
+of the waiver on critical judge contains an endless hope.
+
+Removing consecutive pronouns:
+of the waiver on critical judge contains an endless hope.
+
+Swapping reverse orders verbs and noun/pronouns:
+of the waiver on critical judge contains an endless hope.
+
+Bigram Language Model:
+judge on an critical contains endless of the waiver hope.
+
+Bigram POS Language Model:
+contains an critical endless on judge hope of the waiver.
+
+Rearrangement of POS:
+an endless on judge critical of the waiver contains hope.
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+trotzdem habe ich immer noch angst, ich könnte etwas versäumen, wenn ich einmal nicht daran denke, dass – wie mein vater arroganterweise unterstellte und ich ebenso arrogant wiederhole – das gefühl für anstand schon bei der geburt ganz ungleich verteilt wird.
+
+Original Translation:
+i am still a little afraid of missing something if i forget that, as my father snobbishly suggested, and i snobbishly repeat, a sense of the fundamental decencies is parcelled out unequally at birth.
+
+Direct Machine Translation:
+Nevertheless have I always still anxiety, I could something miss, if I once Not it think, that- as my father arrogantly imputed and I as well arrogant repeat- the feeling For decency beautiful at of the birth all unequal distributed becomes.
+
+Fixing determiners:
+Nevertheless have I always still anxiety, I could something miss, if I once Not it think, that- as my father arrogantly imputed and I as well arrogant repeat- the feeling For decency beautiful at of the birth all unequal distributed becomes.
+
+Removing consecutive pronouns:
+Nevertheless have I always still anxiety, I could something miss, if I once Not it think, that- as my father arrogantly imputed and I as well arrogant repeat- the feeling For decency beautiful at of the birth all unequal distributed becomes.
+
+Swapping reverse orders verbs and noun/pronouns:
+Nevertheless I have always still anxiety, I could something miss, if I once Not it think, that- as my father arrogantly imputed and I as well arrogant repeat- the feeling For decency beautiful at of the birth all unequal becomes distributed.
+
+Bigram Language Model:
+For arrogant repeat,- as well becomes beautiful, I think all- of the that, I if birth the miss Nevertheless at still imputed anxiety my I something have could father feeling I once and always it unequal as arrogantly decency Not distributed.
+
+Bigram POS Language Model:
+it have my, as birth I father decency that For and could still, distributed think feeling if miss all as well something always becomes imputed- arrogantly repeat I Nevertheless I I of the- at arrogant, Not once beautiful the unequal anxiety.
+
+Rearrangement of POS:
+it, as birth I have decency father For and still, distributed think feeling if miss all as well something always becomes imputed my arrogantly repeat I Nevertheless I I of the that at arrogant, Not once beautiful the unequal anxiety. could--
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+Source Sentence:
+nachdem ich mich solcherart meiner toleranz gerühmt habe, muss ich wohl zugeben, dass sie auch eine grenze hat.
+
+Original Translation:
+and, after boasting this way of my tolerance, i come to the admission that it has a limit.
+
+Direct Machine Translation:
+after this I me of such mine tolerance vaunted have, got to I well admit, that you also a border Has.
+
+Fixing determiners:
+after this I me of such mine tolerance vaunted have, got to I well admit, that you also a border Has.
+
+Removing consecutive pronouns:
+after this me of such mine tolerance vaunted have, got to I well admit, that you also a border Has.
+
+Swapping reverse orders verbs and noun/pronouns:
+after this me of such mine tolerance vaunted have, I got to well admit, that you also a border Has.
+
+Bigram Language Model:
+after this, a you also admit have mine I me vaunted well border of such that, Has tolerance got to.
+
+Bigram POS Language Model:
+well also of such that admit Has got to a I border tolerance mine vaunted you after this have me,,.
+
+Rearrangement of POS:
+of such that admit well also a I tolerance mine vaunted you after this have me,,. Has got to border
+
+------------------------------------------------------------------------------------------------------
