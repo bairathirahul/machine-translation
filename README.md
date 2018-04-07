@@ -1,4 +1,4 @@
-Machine Translation
+# Machine Translation
 
 ## Direct Machine Translation
 The input to this translation is stored in the "data" folder with filenames "dev_de.txt" (Dev set in Deutsche), "dev_en.txt" (English translation of the dev set), "test_de.txt", (Test set in Deutsche) and "test_en.txt" (English translation of the test set). The program also needs "dictionary.json" file, which is a closed dictionary. To execute the program, run following command:
